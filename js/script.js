@@ -15,7 +15,7 @@
 		onrendered: function(canvas) {
 		  var a = document.createElement('a');
 		  a.href = canvas.toDataURL("image/jpeg");
-		  a.download = $.now()+'.jpeg';
+		  a.download = Date.now()+'.jpeg';
 		  a.click();
 		},
 		allowTaint:true
@@ -40,9 +40,9 @@
 				//window.open(imgData);
 
 		        //pdf.addImage(imgData, 'PNG', 5, 5);
-		        //pdf.save($.now()+'.pdf');
+		        //pdf.save(Date.now()+'.pdf');
 		        pdf.addHTML(document.body, function() {
-				  	pdf.save($.now()+'.pdf');
+				  	pdf.save(Date.now()+'.pdf');
 				});
 		    }
 		});
