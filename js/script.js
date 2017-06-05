@@ -6,7 +6,7 @@
 	});
 
 	document.getElementById('downloadPDF').addEventListener('click', function(){
-		downloadImage();
+		downloadPDF();
 	});
 
 
@@ -14,8 +14,8 @@
 		html2canvas(document.body, {
 		onrendered: function(canvas) {
 		  var a = document.createElement('a');
-		  a.href = canvas.toDataURL("image/png");
-		  a.download = $.now()+'.png';
+		  a.href = canvas.toDataURL("image/jpeg");
+		  a.download = $.now()+'.jpeg';
 		  a.click();
 		},
 		allowTaint:true
@@ -30,7 +30,7 @@
 				ctx.fillStyle="#FFFFFF";
 				ctx.fillRect(0 , 0 , canvas.width, canvas.height);
 				*/
-		        var imgData = canvas.toDataURL("image/png");
+		        var imgData = canvas.toDataURL("image/jpeg");
 		        var pdf = new jsPDF('p', 'mm', 'a4');
 		        // window.open(imgData);
 		        pdf.setProperties({
