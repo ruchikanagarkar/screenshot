@@ -8,12 +8,6 @@
     <title>Screenshot</title>
     <link rel="stylesheet" href="css/material.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/material.min.js"></script>
-    <script src="js/html2canvas.js"></script>
-    <!-- <script src="jspdf.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
@@ -29,12 +23,12 @@
                 <!-- Navigation. We hide it in small screens. -->
                 <nav class="mdl-navigation mdl-layout--large-screen-only">
                     <a class="mdl-navigation__link" href="javascript:void(0)">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="downloadPDF()">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="downloadPDF">
                             Download PDF
                         </button>
                     </a>
                     <a class="mdl-navigation__link" href="javascript:void(0)">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="downloadImage()" >
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="downloadImage" >
                             Download Image
                         </button>
                     </a>
@@ -45,12 +39,12 @@
             <span class="mdl-layout-title">Screenshot</span>
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link" href="">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="downloadPDF()">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="downloadPDF">
                         Download PDF
                     </button>
                 </a>
                 <a class="mdl-navigation__link" href="">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="downloadImage()">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="downloadImage">
                         Download Image
                     </button>
                 </a>
@@ -78,6 +72,13 @@
         </main>
     </div>
 
+    <!--scripts-->
+     <script src="js/material.min.js"></script>
+    <script src="js/html2canvas.js"></script>
+    <!-- <script src="jspdf.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.min.js"></script>
 </body>
 
 </html>
